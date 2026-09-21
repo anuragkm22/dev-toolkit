@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Online YAML Validator — Dev Toolkit</title>
+    <meta
+      name="description"
+      content="Paste YAML and instantly validate it. Catches indentation errors — the most common silent-failure bug in YAML — with the exact line and column. Free, runs entirely in your browser."
+    />
+    <link rel="canonical" href="https://dev-toolkit.example.com/yaml-validator/" />
+
+    <!-- Open Graph (Slack/Facebook/LinkedIn preview cards) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Free Online YAML Validator" />
+    <meta property="og:description" content="Paste YAML and instantly validate it. Catches indentation errors with the exact line and column. Free, runs entirely in your browser." />
+    <meta property="og:image" content="https://dev-toolkit.example.com/og-image.png" />
+    <meta property="og:url" content="https://dev-toolkit.example.com/yaml-validator/" />
+    <meta property="og:site_name" content="Dev Toolkit" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Online YAML Validator" />
+    <meta name="twitter:description" content="Paste YAML and instantly validate it. Catches indentation errors with the exact line and column." />
+    <meta name="twitter:image" content="https://dev-toolkit.example.com/og-image.png" />
+
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your real Measurement ID before deploying -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/yaml-validator/main.ts"></script>
+  </body>
+</html>

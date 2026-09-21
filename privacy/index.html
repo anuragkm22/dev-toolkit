@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Dev Toolkit</title>
+    <meta
+      name="description"
+      content="How Dev Toolkit handles data: everything runs client-side in your browser, nothing you paste is sent to a server."
+    />
+    <link rel="canonical" href="https://dev-toolkit.example.com/privacy/" />
+
+    <!-- Open Graph (Slack/Facebook/LinkedIn preview cards) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy Policy — Dev Toolkit" />
+    <meta property="og:description" content="How Dev Toolkit handles data: everything runs client-side in your browser, nothing you paste is sent to a server." />
+    <meta property="og:image" content="https://dev-toolkit.example.com/og-image.png" />
+    <meta property="og:url" content="https://dev-toolkit.example.com/privacy/" />
+    <meta property="og:site_name" content="Dev Toolkit" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy Policy — Dev Toolkit" />
+    <meta name="twitter:description" content="How Dev Toolkit handles data: everything runs client-side, nothing you paste is sent to a server." />
+    <meta name="twitter:image" content="https://dev-toolkit.example.com/og-image.png" />
+
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your real Measurement ID before deploying -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
+    <link rel="stylesheet" href="/shared/trust-page.css" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/">Dev Toolkit</a>
+        <div class="topbar-links">
+          <a href="/about/">About</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page">
+      <h1>Privacy Policy</h1>
+      <p><em>Placeholder — to be finalized before applying for AdSense.</em></p>
+
+      <h2>What this site does</h2>
+      <p>
+        All tools on Dev Toolkit run entirely client-side, in your browser.
+        Anything you type or paste into a tool (such as JSON or YAML
+        content) is processed locally and is never transmitted to a server,
+        stored in a database, or logged by us. There is no backend.
+      </p>
+
+      <h2>Shareable links</h2>
+      <p>
+        Some tools let you generate a shareable link. The data for that
+        link is encoded directly into the URL itself (after the
+        <code>#</code> symbol), not sent to or stored on a server. Anyone
+        with the link can view the encoded content — treat share links the
+        same way you'd treat any other file you're sharing.
+      </p>
+
+      <h2>Analytics</h2>
+      <p>
+        This site uses Google Analytics (GA4) to understand overall traffic
+        — which pages get visited and roughly how many people use each
+        tool. Google Analytics may set cookies and collect information
+        such as your approximate location (city/region level, derived from
+        IP address), device type, browser, and referring page. This is
+        separate from the tools themselves: analytics tracks that you
+        visited a page, not what you typed or pasted into any tool, which
+        never leaves your browser.
+      </p>
+      <p>
+        You can opt out of Google Analytics tracking using a browser
+        extension such as the
+        <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>,
+        or by using your browser's tracking-protection or ad-blocking
+        features.
+      </p>
+
+      <h2>Advertising</h2>
+      <p>
+        This site may display advertising (e.g. Google AdSense) in the
+        future to support hosting costs. Advertising providers may use
+        cookies or similar technologies to serve relevant ads. This
+        section will be updated with specifics once that integration is
+        added.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy can be sent via the
+        <a href="/contact/">contact page</a>.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="/">Dev Toolkit</a> ·
+        <a href="/about/">About</a> ·
+        <a href="/privacy/">Privacy</a> ·
+        <a href="/contact/">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

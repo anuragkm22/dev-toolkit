@@ -1,0 +1,67 @@
+@import "./tool-page.css";
+
+/* Single-input validator layout: one panel, full width, plus a result
+   panel below. Simpler than the diff tool's two-column layout. */
+.validator-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.result-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem 1.5rem;
+  min-height: 100px;
+}
+
+.result-panel .placeholder {
+  color: var(--color-text-faint);
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.result-valid {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-added-text);
+  background: var(--color-added-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+}
+
+.result-valid svg {
+  flex-shrink: 0;
+}
+
+/* Inline error highlighting inside the editor, shown alongside (not
+   instead of) the text error report below the editor. */
+.cm-error-highlight {
+  background: var(--color-removed-bg);
+  text-decoration: underline wavy var(--color-removed-text);
+  text-decoration-thickness: 1.5px;
+}
+
+.cm-error-line {
+  background: var(--color-removed-bg);
+}
+
+/* Validator panel toolbar: Format/Minify/Copy/Reset actions, separate
+   from the diff tool's panel-foot (format toggle + convert). */
+.validator-toolbar {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Toolkit — Free Developer Utilities</title>
+    <meta
+      name="description"
+      content="A growing collection of small, focused developer tools that run entirely in your browser. Starting with a JSON/YAML config diff and validator, more tools on the way."
+    />
+    <link rel="canonical" href="https://dev-toolkit.example.com/" />
+
+    <!-- Open Graph (Slack/Facebook/LinkedIn preview cards) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dev Toolkit — Free Developer Utilities" />
+    <meta property="og:description" content="A growing collection of small, focused developer tools that run entirely in your browser. No backend, no accounts, no data collection." />
+    <meta property="og:image" content="https://dev-toolkit.example.com/og-image.png" />
+    <meta property="og:url" content="https://dev-toolkit.example.com/" />
+    <meta property="og:site_name" content="Dev Toolkit" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dev Toolkit — Free Developer Utilities" />
+    <meta name="twitter:description" content="A growing collection of small, focused developer tools that run entirely in your browser." />
+    <meta name="twitter:image" content="https://dev-toolkit.example.com/og-image.png" />
+
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your real Measurement ID before deploying -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
+    <link rel="stylesheet" href="/shared/trust-page.css" />
+    <style>
+      /* Homepage-only tweaks: wider content area than the trust pages, and
+         a subtitle line under the H1. The real homepage design (tool grid,
+         supporting content) will expand this in a later phase. */
+      .page {
+        max-width: 1100px;
+      }
+      .page p.subtitle {
+        margin: 0 0 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/">Dev Toolkit</a>
+        <div class="topbar-links">
+          <a href="/about/">About</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page">
+      <h1>Dev Toolkit</h1>
+      <p class="subtitle">A growing set of small, focused utilities for developers. More on the way.</p>
+
+      <div class="tool-grid">
+        <a class="tool-card" href="/json-yaml-diff/">
+          <h2>Config Diff &amp; Validator</h2>
+          <p>Compare JSON or YAML configs, ignore key reordering and formatting noise, and catch syntax errors with exact line/column locations.</p>
+        </a>
+
+        <a class="tool-card" href="/json-validator/">
+          <h2>JSON Validator</h2>
+          <p>Paste JSON and instantly check it for syntax errors, with the exact line and column of any problem.</p>
+        </a>
+
+        <a class="tool-card" href="/yaml-validator/">
+          <h2>YAML Validator</h2>
+          <p>Paste YAML and instantly check it for syntax and indentation errors, with the exact line and column.</p>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="/">Dev Toolkit</a> ·
+        <a href="/about/">About</a> ·
+        <a href="/privacy/">Privacy</a> ·
+        <a href="/contact/">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,428 @@
+/* Shared base styling for every interactive tool page (the diff tool and
+   both validator pages). Palette, page shell, input panel/editor/toggle
+   controls, and buttons live here so every tool looks consistent and a
+   new tool page only needs its own layout + result-display CSS on top
+   of this. */
+
+:root {
+  color-scheme: light;
+
+  /* Palette */
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-border: #e2e5ea;
+  --color-text: #1c2128;
+  --color-text-muted: #57606a;
+  --color-text-faint: #8b949e;
+
+  --color-brand: #2563eb;
+  --color-brand-hover: #1d4ed8;
+  --color-brand-tint: #eef3ff;
+
+  --color-added-bg: #e9f9ee;
+  --color-added-text: #1a7f37;
+  --color-removed-bg: #fdedec;
+  --color-removed-text: #cf222e;
+  --color-changed-bg: #fff6e0;
+  --color-changed-text: #9a6700;
+  --color-unchanged-text: #57606a;
+
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+
+  --radius-md: 10px;
+  --radius-sm: 6px;
+
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Top bar */
+
+.topbar {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.topbar-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.topbar-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.topbar-links a:hover {
+  color: var(--color-brand);
+}
+
+/* Page shell */
+
+.page {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6rem;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  margin: 0 auto;
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.tool-crosslinks {
+  color: var(--color-text-faint);
+  font-size: 0.85rem;
+  margin: 0.75rem auto 0;
+}
+
+.tool-crosslinks a {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+.tool-crosslinks a:hover {
+  text-decoration: underline;
+}
+
+/* Input panels */
+
+.input-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-head {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(to bottom, #fafbfc, #f5f6f8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.panel-head-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.open-file-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.open-file-button:hover {
+  background: var(--color-brand-tint);
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.panel-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: text;
+}
+
+.format-toggle {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.format-toggle button {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-right: 1px solid var(--color-border);
+}
+
+.format-toggle button:last-child {
+  border-right: none;
+}
+
+.format-toggle button:hover {
+  background: var(--color-brand-tint);
+}
+
+.format-toggle button.active {
+  background: var(--color-brand);
+  color: white;
+}
+
+.panel-foot {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.format-badge {
+  font-size: 0.78rem;
+  color: var(--color-text-faint);
+}
+
+.convert-button {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-brand);
+  cursor: pointer;
+}
+
+.convert-button:hover {
+  background: var(--color-brand-tint);
+}
+
+.editor-host {
+  flex: 1;
+  min-height: 280px;
+}
+
+.editor-host .cm-editor {
+  height: 100%;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.87rem;
+}
+
+.editor-host .cm-scroller {
+  line-height: 1.55;
+}
+
+.editor-host .cm-content {
+  padding: 1rem 0;
+  color: var(--color-text);
+}
+
+.editor-host .cm-gutters {
+  background: var(--color-surface);
+  color: var(--color-text-faint);
+  border-right: 1px solid var(--color-border);
+}
+
+.editor-host .cm-activeLine {
+  background: var(--color-brand-tint);
+}
+
+.editor-host .cm-activeLineGutter {
+  background: var(--color-brand-tint);
+}
+
+.editor-host .cm-editor.cm-focused {
+  outline: 2px solid var(--color-brand);
+  outline-offset: -2px;
+}
+
+.editor-host .cm-placeholder {
+  color: var(--color-text-faint);
+}
+
+/* Actions */
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+}
+
+.btn-primary {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.75rem 2.5rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--color-brand);
+  color: white;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 120ms ease, transform 80ms ease,
+    box-shadow 120ms ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-brand-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:disabled {
+  background: #c7d3ec;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-brand-tint);
+  border-color: var(--color-brand);
+}
+
+.output-toolbar[hidden] {
+  display: none;
+}
+
+.output-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.btn-ghost {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  min-width: 8.5rem;
+}
+
+.btn-ghost:hover {
+  background: var(--color-brand-tint);
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+/* Shared error display — used by the diff tool's invalid-input message
+   and both validator pages' invalid-input result. */
+.diff-error {
+  color: var(--color-removed-text);
+  background: var(--color-removed-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+
+.site-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.site-footer p {
+  color: var(--color-text-faint);
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer a {
+  color: var(--color-text-faint);
+}
+
+.site-footer a:hover {
+  color: var(--color-brand);
+}
+
+/* Responsive */
+
+@media (max-width: 760px) {
+  .site-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .page {
+    padding: 1.75rem 1rem 2.5rem;
+  }
+}

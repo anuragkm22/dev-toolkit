@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Dev Toolkit</title>
+    <meta
+      name="description"
+      content="Dev Toolkit is a small collection of focused, client-side developer utilities — no backend, no accounts, no data collection."
+    />
+    <link rel="canonical" href="https://dev-toolkit.example.com/about/" />
+
+    <!-- Open Graph (Slack/Facebook/LinkedIn preview cards) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About — Dev Toolkit" />
+    <meta property="og:description" content="Dev Toolkit is a small collection of focused, client-side developer utilities — no backend, no accounts, no data collection." />
+    <meta property="og:image" content="https://dev-toolkit.example.com/og-image.png" />
+    <meta property="og:url" content="https://dev-toolkit.example.com/about/" />
+    <meta property="og:site_name" content="Dev Toolkit" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About — Dev Toolkit" />
+    <meta name="twitter:description" content="Dev Toolkit is a small collection of focused, client-side developer utilities." />
+    <meta name="twitter:image" content="https://dev-toolkit.example.com/og-image.png" />
+
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your real Measurement ID before deploying -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
+    <link rel="stylesheet" href="/shared/trust-page.css" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/">Dev Toolkit</a>
+        <div class="topbar-links">
+          <a href="/about/">About</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page">
+      <h1>About Dev Toolkit</h1>
+      <p>
+        Dev Toolkit is a small collection of focused utilities for developers
+        and data engineers — starting with the Config Diff &amp; Validator,
+        a tool for comparing JSON and YAML config files without getting
+        distracted by key reordering or formatting noise.
+      </p>
+      <p>
+        Everything on this site runs entirely in your browser. There's no
+        backend, no account, and no data storage — what you paste into a
+        tool stays on your machine and is never sent anywhere.
+      </p>
+      <p>
+        More tools are on the way. This page will grow along with the site.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="/">Dev Toolkit</a> ·
+        <a href="/about/">About</a> ·
+        <a href="/privacy/">Privacy</a> ·
+        <a href="/contact/">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

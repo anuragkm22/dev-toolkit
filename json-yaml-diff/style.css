@@ -1,0 +1,77 @@
+@import "../shared/tool-page.css";
+
+/* Diff-specific layout: two side-by-side input panels. Validator pages
+   use a single-column layout defined in their own stylesheet instead. */
+.diff-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 760px) {
+  .diff-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Output panel (diff results) */
+
+.output-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem 1.5rem;
+  min-height: 140px;
+}
+
+.output-panel .placeholder {
+  color: var(--color-text-faint);
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.diff-tree {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.87rem;
+  line-height: 1.7;
+}
+
+.diff-row {
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: var(--radius-sm);
+  padding: 0.15rem 0.5rem;
+}
+
+.diff-marker {
+  display: inline-block;
+  width: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.diff-key {
+  font-weight: 600;
+}
+
+.diff-row--added {
+  background: var(--color-added-bg);
+  color: var(--color-added-text);
+}
+
+.diff-row--removed {
+  background: var(--color-removed-bg);
+  color: var(--color-removed-text);
+}
+
+.diff-row--changed {
+  background: var(--color-changed-bg);
+  color: var(--color-changed-text);
+}
+
+.diff-row--unchanged {
+  color: var(--color-unchanged-text);
+}
