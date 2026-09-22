@@ -2,3 +2,19 @@ node_modules
 dist
 .DS_Store
 *.local
+
+# Environment variables — never commit real secrets/keys
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS junk
+Thumbs.db

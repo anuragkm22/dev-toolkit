@@ -134,8 +134,8 @@ Pages / Vercel serve this as a single multi-page site.
    the analytics script loads and even fires requests, but Google
    discards them since the ID isn't real — no data is currently being
    collected.
-3. **Contact email**: `contact/index.html` has `hello@example.com` —
-   replace with a real address.
+3. ~~**Contact email**~~ — done. `contact/index.html` now uses
+   `toolora.apps.support@gmail.com`.
 4. **Trust page content**: About/Privacy/Contact have placeholder or
    partially-placeholder copy — flesh out before applying to AdSense.
 

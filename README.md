@@ -56,10 +56,9 @@ dev-toolkit/
 Adding a Phase 2 tool later = new folder + new entry in
 `vite.config.ts`'s `rollupOptions.input`.
 
-**Before applying for AdSense:** the About/Privacy/Contact pages
-currently have placeholder content and a placeholder contact email
-(`hello@example.com` in `contact/index.html`) — replace these with real
-content and a real contact method first.
+**Before applying for AdSense:** the About/Privacy/Contact pages still
+have placeholder content in places — flesh these out before applying.
+The contact email is real (`toolora.apps.support@gmail.com`).
 
 ## Requirements
 
