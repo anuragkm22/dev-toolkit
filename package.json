@@ -12,10 +12,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.57.3",
     "@types/js-yaml": "^4.0.9",
     "typescript": "^5.6.3",
     "vite": "^6.0.0",
-    "wrangler": "^4.0.0"
+    "wrangler": "^4.136.3"
   },
   "dependencies": {
     "@codemirror/commands": "^6.11.1",

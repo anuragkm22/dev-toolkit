@@ -1,13 +1,15 @@
 import { defineConfig } from "vite";
 import { resolve } from "node:path";
+import { cloudflare } from "@cloudflare/vite-plugin";
 
-// Multi-page setup: each tool (and the homepage) is a separate static HTML
-// entry point. This keeps routing simple and conventional for a static site
-// deployed with no server-side logic — Cloudflare Pages / Vercel serve each
-// HTML file directly at its folder path.
+// Multi-page setup: each tool and page has its own HTML entry point.
 const root = import.meta.dirname;
 
 export default defineConfig({
+  plugins: [
+    cloudflare(),
+  ],
+
   build: {
     rollupOptions: {
       input: {
